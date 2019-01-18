@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Michelle Landen Homepage</title>
+        <script type="text/javascript" src="home.js"></script>
+        <link rel='stylesheet' type="text/css" href="main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    
+    <body>
+        <div id="content">
+            <div class="sidenav">
+                <a href="home.html">Home</a>
+                <a href="assignments.html">Assignments</a>
+            </div>
+            <div id="head">
+                <header>
+                    <h1>CS 313 Home | Michelle Landen <img src="me.jpg" alt="me" id="img1"></h1>
+                </header>
+            </div>
+            <h2>About me:</h2>
+            <p>I am from western Oregon and I love the beauty of the northwest! I've spent most of the last 15 years working night shift, which I actually love as I'm a night owl, in the medical field. Currently, I work in an emergency department but I'm majoring in Software Engineering as I feel it's time for a career/life shift. I love the logic, challenge, and versatility of this field.</p>
+            <p>I have a Great Pyrenees dog, Freya, and a Ragdoll cat, Griffin. I don't have any children of my own but I've helped raise one nephew for most of the last 14 years. I've also helped raise three more niece and nephews, off and on, for the last 8 years.</p>
+            <div id="images">
+                <img src="freya.jpg" alt="freya" id="img2">
+                <img src="FreyaAndGriffin.jpg" alt="pets" id="img3">
+                <img src="griffin.jpg" alt="griff" id="img4">
+                <img src="hayden&joseph.jpg" alt="youngest" id="img5">
+                <img src="heidi.jpg" alt="heidi" id="img6">
+                <img src="christopher.jpg" alt="cl" id="img7">
+            </div>
+            <h2>Hobbies:</h2>
+            <p>In what little free time there seems to be I love to read, sing, and take my dog to the beach. Oregon's coast is <em>VERY</em> dog friendly! Once upon a time I played the oboe with a little bit of french horn and alto sax. Someday, I'd love to be able to get an oboe, at least, and pick that back up.</p>
+            <footer>
+                <?php include 'date.php' ?>
+				<?php
+					// display today's date and time
+					date_default_timezone_set("America/Los_Angeles");
+					$date=date("m/d/Y h:i:s a");
+	
+					echo $date;
+					?>
+            </footer>
+        </div>
+    </body>
+</html>
