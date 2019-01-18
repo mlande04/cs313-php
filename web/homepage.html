@@ -35,10 +35,11 @@
             <footer>
                 <?php include 'date.php' ?>
 				<?php
-					// display today's date and time
+					// set the timezone
 					date_default_timezone_set("America/Los_Angeles");
+					// format the date
 					$date=date("m/d/Y h:i:s a");
-	
+					// display today's date and time
 					echo $date;
 					?>
             </footer>
