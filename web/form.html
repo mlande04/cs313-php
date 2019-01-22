@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>03 Teach Activity</title>
+    </head>
+	
+	<body>
+		<header>03 Teach Activity</header>
+		<form action = "teach03.php" method = "POST" name = "form0">
+			<!-- Personal information -->
+			<label>Name: <br></label>
+			<input type = "text" name = "name" size = "50" /><br>
+			<label>Email: <br></label>
+			<input type = "email" name = "email" size = "50" /><br>
+			<label>Major: <br></label>
+			<input type="radio" id="cs" name="major" value="CS">
+			<label for="CS">Computer Science</label>
+			<input type="radio" id="wdd" name="major" value="WDD">
+			<label for="WDD">Web Design and Development</label>
+			<input type="radio" id="cit" name="major" value="CIT">
+			<label for="CIT">Computer Information Technology</label>
+			<input type="radio" id="ce" name="major" value="CE">
+			<label for="CE">Computer Engineering</label>
+			<!-- Comments -->
+			<label>Comments: <br></label>
+			<textarea rows = "6" cols = "50" name = "comments">
+			</textarea><br>
+			<!-- Checkboxes for countries visited -->
+			<input type = "checkbox" id = "na" name = "country[]" value = "NA">
+			<label for = "NA">North America</label>
+			<input type = "checkbox" id = "sa" name = "country[]" value = "SA">
+			<label for = "NA">South America</label>
+			<input type = "checkbox" id = "euro" name = "country[]" value = "EURO">
+			<label for = "EURO">Europe</label>
+			<input type = "checkbox" id = "asia" name = "country[]" value = "ASIA">
+			<label for = "ASIA">Asia</label>
+			<input type = "checkbox" id = "af" name = "country[]" value = "AF">
+			<label for = "AF">Africa</label>
+			<input type = "checkbox" id = "antar" name = "country[]" value = "ANTAR">
+			<label for = "ANTAR">Antarctica</label>
+			<input type = "checkbox" id = "au" name = "country[]" value = "AU">
+			<label for = "AU">Australia</label>
+			<br>
+			<!-- Submit button -->
+			<input type="submit" value = "submit">
+		</form>
+	</body>
+</html>
