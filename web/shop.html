@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CS 313 Prove 03 | Blade Shop Store</title>
+	<script type="text/javascript" src="prove03.js"></script>
+	<link rel='stylesheet' type="text/css" href="prove03.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+<body>
+	<div id="content">
+	<!-- Side navigation -->
+	<div class="sidenav">
+		<a href="Home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+	</div>
+	
+	<header>
+		<h1>The Blade Shop | Browse Products<a href="cart.html"><img src="cart.jpg" alt="cart" align="right"></a></h1>
+		<p>Check out our selection of high quality blades! We have many fine reproductions available.</p>
+	</header>
+	
+	<div class="main">
+    <!-- Inventory -->
+	<form action="purchaseRev.php" id="form0" oninput="addVol()" onsubmit="return validForm();" method="post">
+        <h2>Broadsword</h2>
+        <p name="sword[Broadsword]">Victorian broadsword reproduction: a double-edged basket-hilted sword
+        <img src="broadsword.jpg" alt="broadsword" align="right" height="150px" width="150px"></p>
+        <p class="price" name="price[]">$1000.00</p>
+
+          <div>
+                <button type="button" onclick="addCart()">Add to Cart</button>
+           </div>
+
+        <h2>Rapier</h2>
+        <p name="sword[Rapier]">Renaissance reproduction: a slender, sharply pointed sword
+        <img src="rapier.jpg" alt="rapier" align="right" height="150px" width="150px"></p>
+        <p class="price" name="price[]">$1500.00</p>
+          <div>
+                <button type="button"  onclick="addCart()">Add to Cart</button>
+           </div>
+
+        <h2>Claymore</h2>
+        <p name="sword[Claymore]">Early Scottish reproduction: two handed sword, early version of a greatsword
+        <img src="scotClaymore.jpg" alt="claymore" align="right" height="150px" width="150px"></p>
+        <p class="price" name="price[]">$1950.00</p>
+          <div>
+                <button type="button"  onclick="addCart()">Add to Cart</button>
+           </div>
+
+        <h2>Katana</h2>
+        <p name="sword[Katana]">Japanese reproduction: traditionally used by samurai; a two handed, curved, slender, single-edged sword
+        <img src="katana.jpg" alt="katana" align="right" height="150px" width="150px"></p>
+        <p class="price" name="price[]">$1200.00</p>
+          <div>
+                <button type="button"  onclick="addCart()">Add to Cart</button>
+           </div>
+
+        <h2>Sabre</h2>
+        <p name="sword[Sabre]">A single-edged curved bladed cavalry sword
+        <img src="sabre.jpg" alt="sabre" align="right" height="150px" width="150px"></p>
+        <p class="price" name="price[]">$700.00</p>
+          <div>
+                <input id="item5" name="item[]" size="3"/>
+                <button type="button"  onclick="addCart()">Add to Cart</button>
+           </div>
+
+        <h2>Long Sword</h2>
+        <p name="sword[LongSword]">Medieval reproduction: a two handed, straight, double-edged sword
+        <img src="longsword.jpg" alt="longsword" align="right" height="150px" width="150px"></p>
+        <p class="price" name="price[]">$550.00</p>
+          <div>
+                <input id="item6" name="item[]" size="3"/>
+                <button type="button"  onclick="addCart()">Add to Cart</button>
+           </div>
+
+        <h2>Dirk</h2>
+        <p name="sword[Dirk]">Scottish reproduction: a long thrusting dagger
+        <img src="dirk.jpg" alt="dirk" align="right" height="150px" width="150px"></p>
+        <p class="price" name="price[]">$250.00</p>
+          <div>
+                <input id="item7" name="item[]" size="3"/>
+                <button type="button"  onclick="addCart()">Add to Cart</button>
+           </div>
+
+        <h2>Stiletto</h2>
+        <p name="sword[Stiletto]">15th Century Italian reproduction: a long,slender blade with a needle-like point primarily used for stabbing
+        <img src="stiletto.jpg" alt="stiletto" align="right" height="150px" width="150px"></p>
+        <p class="price" name="price[]">$375.00</p>
+          <div>
+                <input id="item8" name="item[]" size="3"/>
+                <button type="button"  onclick="addCart()">Add to Cart</button>
+           </div>
+
+        <h2>Hunting Dagger</h2>
+        <p name="sword[Hunting_Dagger]">18th Century German reproduction: a long double-edged stabbing knife, traditionally used to kill deer and boar
+        <img src="hunting dagger.jpg" alt="hunting dagger" align="right" height="150px" width="150px"></p>
+        <p class="price" name="price[]">$150.00</p>
+          <div>
+                <input id="item9" name="item[]" size="3"/>
+                <button type="button"  onclick="addCart()">Add to Cart</button>
+           </div>
+
+        <h2>Arkansas Toothpick</h2>
+        <p name="sword[Arkansas_Toothpick]">19th Century American reproduction: a heavy dagger with a 12-20 inch pointed, straight blade
+        <img src="arkToothpick.jpg" alt="toothpick" align="right" height="150px" width="150px"></p>
+        <p class="price" name="price[]">$150.00</p>
+          <div>
+                <input id="item10" name="item[]" size="3"/>
+                <button type="button"  onclick="addCart()">Add to Cart</button>
+           </div>
+
+	<!--Submit or Reset--> 
+	<div class="done">
+		<input type="submit" value="View Cart" src="cart.html">
+	</div>
+	</form>
+	
+	<footer>
+        <div class="#">
+			<p id="info">&copy; 2018 The Blade Shop || Michelle Landen  </p>
+		</div>
+        <div class="#">
+			<a class="socialmedia" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-4x" aria-hidden="true" alt="FB"></i></a>
+			<a class="socialmedia" href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter-square fa-4x" aria-hidden="true" alt="twitter"></i></a>
+			<a class="socialmedia" href="https://www.youtube.com/?hl=en" target="_blank"><i class="fa fa-youtube-square fa-4x" aria-hidden="true" alt="youtube"></i></a>
+		</div>
+	</footer>
+		</div>
+		</div>
+  </body>
+</html>

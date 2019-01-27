@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CS 313 Prove 03 | Blade Shop Home</title>
+    <script type="text/javascript" src="prove03.js"></script>
+    <link rel='stylesheet' type="text/css" href="prove03.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="content">
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <a href="Home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+    </div>
+
+    <header>
+        <h1>The Blade Shop | Checkout<a href="cart.html"><img src="cart.jpg" alt="cart" align="right"></a></h1>
+        <p><?php include 'date.php'?></p>
+    </header>
+    <div class="main">
+    <!-------------- Customer Name ------------------>
+    <form action="confirmation.php" method="post">
+	<h3>Personal Information:</h3>
+		<ul id="pip" name="pip">
+			<li><label for="name1">First name:</label></li>
+			<li id="pi1" ><input type="text" name="name1" size="20" /><span style="color:red">*Required</span></li>
+			<li><label for="name2">Last name:</label></li>
+			<li id="pi2" ><input type="text" name="name2" size="20" /><span style="color:red">*Required</span></li>
+			<li><label for="street">Street address:</label></li>
+			<li id="pi3" ><input type="text" name="stAddress" size="50" /><span style="color:red">*Required</span></li>
+			<li><label for="city">City:</label></li>
+			<li id="pi4" ><input type="text" name="city" size="20" /><span style="color:red">*Required</span></li>
+			<li><label for="state">State:</label></li>
+			<li id="pi5" ><input type="text" name="state" size="2" /><span style="color:red">*Required</span></li>
+			<li><label for="zip">Zip code:</label></li>
+			<li id="pi6" ><input type="text" name="zip" size="10" /><span style="color:red">*Required</span></li>
+			<li><label for="country">Country:</label></li>
+			<li><select name="country">
+				<option selected="" value="Default">(Please select a country)</option>
+				<option value="AF">Australia</option>
+				<option value="AL">Canada</option>
+				<option value="DZ">India</option>
+				<option value="AS">Russia</option>
+				<option value="AD">USA</option>
+			</select></li>
+			<li><label for="email">Email:</label></li>
+			<li ><input type="text" name="email" size="50" /><span style="color:red">Optional</span></li>
+			<li onclick="signUp(yesAdd,noAdd)"><label for="signup">Sign up for our newsletter:</label></li>
+			<li><input type="checkbox" name="yes" value="yes" /><span style="color:lightgrey">Yes</span></li>
+			<li><input type="checkbox" name="no" value="no" /><span style="color:lightgrey">No</span></li>
+			<li><label for="phone">Phone number:</label></li>
+			<li id="pi7" ><input type="text" name="phone" size="10" /><span style="color:red">*Required</span></li>
+		</ul>
+        <span>
+        <button type="submit" name="submit">Submit</button>
+        <button type="submit" name="continue" formaction="shop.html">Continue Shopping</button>
+        </span>
+        </form>
+        <footer>
+        <div class="foot">
+            <p id="info">&copy; 2019 The Blade Shop || Michelle Landen  </p>
+        </div>
+        <div class="foot">
+            <a class="socialmedia" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-4x" aria-hidden="true" alt="FB"></i></a>
+            <a class="socialmedia" href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter-square fa-4x" aria-hidden="true" alt="twitter"></i></a>
+            <a class="socialmedia" href="https://www.youtube.com/?hl=en" target="_blank"><i class="fa fa-youtube-square fa-4x" aria-hidden="true" alt="youtube"></i></a>
+        </div>
+    </footer>
+    </div>
+    </div>
+</body>
+</html>
