@@ -1,39 +1,45 @@
 <?php
-try
-{
-  $dbUrl = getenv('DATABASE_URL');
 
-  $dbOpts = parse_url($dbUrl);
+/**********************************************************
+* File: dbConnect.php
+* Description: Connects using either local
+* OR Heroku credentials, depending on whether the code
+* is executing at heroku.
+***********************************************************/
 
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
+function get_db() {
+	$db = NULL;
 
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	try {
+		// default Heroku Postgres configuration URL
+		$dbUrl = getenv('DATABASE_URL');
 
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		if (!isset($dbUrl) || empty($dbUrl)) {
+			// example localhost configuration URL with user: "ta_user", password: "ta_pass"
+			// and a database called "scripture_ta"
+			$dbUrl = "postgres://user:pass@localhost:5432/scripture";
+		}
+
+		// Get the various parts of the DB Connection from the URL
+		$dbopts = parse_url($dbUrl);
+		$dbHost = $dbopts["host"];
+		$dbPort = $dbopts["port"];
+		$dbUser = $dbopts["user"];
+		$dbPassword = $dbopts["pass"];
+		$dbName = ltrim($dbopts["path"],'/');
+
+		// Create the PDO connection
+		$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+		// this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
+		$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+	}
+	catch (PDOException $ex) {
+		// If this were in production, you would not want to echo
+		// the details of the exception.
+		echo "Error connecting to DB. Details: $ex";
+		die();
+	}
+
+	return $db;
 }
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
-
-foreach ($db->query('SELECT username, password FROM note_user') as $row)
-{
-  echo 'user: ' . $row['username'];
-  echo ' password: ' . $row['password'];
-  echo '<br/>';
-}
-?>
-
-<?php
-
-$stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
-$stmt->execute(array(':name' => $name, ':id' => $id));
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-?>
-
