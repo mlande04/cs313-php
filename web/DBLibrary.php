@@ -15,7 +15,8 @@ $db = get_db();
 <html>
 
 <head>
-	<title>DBLibrary</title>
+	<title>DBLibrary | Home</title>
+	<link rel="stylesheet" type="text/css" href="DBLibrary.css">
 </head>
 
 <body>
@@ -39,6 +40,26 @@ $db = get_db();
 			</select>
 			<input type="submit" value="View Books"/>
 		</form>
+	</div>
+	<div>
+		<p>Add a book to the library:</p>
+		<form method="POST" action="">
+			<span>Title: <input type="text" name="title"></span>
+			<span>Author: <input type="text" name="author"></span>
+			<span>Publication Date: <input type="text" name="date"></span>
+			<br>
+			<input type="submit" value="Add Book">
+		</form>
+	</div>
+	<div>
+		<p>Add Genre to the Library:</p>
+		<form method="POST" action="">
+			<span>Genre: <input type="text" name="title"></span>
+			<br>
+			<input type="submit" value="Add Book">
+		</form>
+	</div>
+	<div>
 		<p><br/>View every book in the library.<br/></p>
 <?php
 
