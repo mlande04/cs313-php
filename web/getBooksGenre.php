@@ -6,7 +6,7 @@
 * 	by a selected genre.
 ***************************************/
 
-require "connection.php";
+require ("connection.php");
 $db = get_db();
 
 ?>

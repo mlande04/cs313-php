@@ -5,7 +5,7 @@
 * Purpose: View items in the db library
 ***************************************/
 
-require "connection.php";
+require ("connection.php");
 $db = get_db();
 
 ?>
@@ -23,6 +23,8 @@ $db = get_db();
 
 	<div>
 		<h1>DB Library</h1>
+		<div class="row">
+		<div class="col" style="background-color: #C9E5F2;">
 		<p>Select a genre to view books from that genre available in the library.</p>
 		<form method="POST" action="getBooksGenre.php">
 			<select name="genreList">
@@ -40,7 +42,6 @@ $db = get_db();
 			</select>
 			<input type="submit" value="View Books"/>
 		</form>
-	</div>
 	<div>
 		<p>Add a book to the library:</p>
 		<form method="POST" action="">
@@ -52,14 +53,15 @@ $db = get_db();
 		</form>
 	</div>
 	<div>
-		<p>Add Genre to the Library:</p>
+		<p>Add a Genre to the Library:</p>
 		<form method="POST" action="">
 			<span>Genre: <input type="text" name="title"></span>
 			<br>
 			<input type="submit" value="Add Book">
 		</form>
 	</div>
-	<div>
+	</div>
+	<div class="col" style="background-color: #DAE9EF;">
 		<p><br/>View every book in the library.<br/></p>
 <?php
 
@@ -74,9 +76,9 @@ $db = get_db();
 			echo $row['title'] . ' ' . $row['author'];
 			echo '</p>';
 		}
-
 ?>
-
+	</div>
+	</div>
 	</div>
 
 </body>
