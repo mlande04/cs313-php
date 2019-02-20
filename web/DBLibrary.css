@@ -18,7 +18,7 @@
 	 }	 
 	 
 	 p {
-		 color: darkgrey;
+		 color: #3E0460;
 		 text-align: center;
 		 padding: 10px;
 		 font-size: 1.5em;
@@ -27,4 +27,15 @@
 
 	form {
 		text-align: center;
+	}
+	
+	.row {
+		display: flex;
+		box-sizing: border-box;
+	}
+	
+	.col {
+		flex: 50%;
+		padding: 10px;
+		
 	}
