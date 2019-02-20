@@ -25,7 +25,7 @@ $db = get_db();
 		<h1>DB Library</h1>
 		<div class="row">
 		<div class="col" style="background-color: #C9E5F2;">
-		<p>Select a genre to view books from that genre available in the library.</p>
+		<p style="font-weight: bold;">Select a genre to view books from that genre available in the library.</p>
 		<form method="POST" action="getBooksGenre.php">
 			<select name="genreList">
 <?php
@@ -43,7 +43,7 @@ $db = get_db();
 			<input type="submit" value="View Books"/>
 		</form>
 	<div>
-		<p>Add a book to the library:</p>
+		<p style="font-weight: bold;">Add a book to the library:</p>
 		<form method="POST" action="">
 			<span>Title: <input type="text" name="title"></span>
 			<span>Author: <input type="text" name="author"></span>
@@ -53,7 +53,7 @@ $db = get_db();
 		</form>
 	</div>
 	<div>
-		<p>Add a Genre to the Library:</p>
+		<p style="font-weight: bold;">Add a Genre to the Library:</p>
 		<form method="POST" action="">
 			<span>Genre: <input type="text" name="title"></span>
 			<br>
@@ -62,7 +62,7 @@ $db = get_db();
 	</div>
 	</div>
 	<div class="col" style="background-color: #DAE9EF;">
-		<p><br/>View every book in the library.<br/></p>
+		<p style="font-weight: bold;"><br/>View every book in the library.<br/></p>
 <?php
 
 		// First, prepare the statement
