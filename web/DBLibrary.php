@@ -40,6 +40,7 @@ $db = get_db();
 				}
 ?>
 			</select>
+			<br>
 			<input type="submit" value="View Books"/>
 		</form>
 	<div>
@@ -48,16 +49,17 @@ $db = get_db();
 			<span>Title: <input type="text" name="title"></span>
 			<span>Author: <input type="text" name="author"></span>
 			<span>Publication Date: <input type="text" name="date"></span>
+			<span>Genre: <input type="text" name="type"></span>
 			<br>
 			<input type="submit" value="Add Book">
 		</form>
 	</div>
 	<div>
 		<p style="font-weight: bold;">Add a Genre to the Library:</p>
-		<form method="POST" action="">
-			<span>Genre: <input type="text" name="title"></span>
+		<form method="POST" action="addGenre.php">
+			<span>Genre: <input type="text" name="genre"></span>
 			<br>
-			<input type="submit" value="Add Book">
+			<input type="submit" value="Add Genre">
 		</form>
 	</div>
 	</div>
