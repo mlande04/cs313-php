@@ -17,6 +17,12 @@
 		 line-height: 1.1em;
 	 }	 
 	 
+	 img {
+		 width: 100%;
+		 opacity: 0.4;
+		 filter: alpha(opacity=40);
+	 }
+	 
 	 p {
 		 color: #3E0460;
 		 text-align: center;
