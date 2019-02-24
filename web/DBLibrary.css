@@ -17,10 +17,25 @@
 		 line-height: 1.1em;
 	 }	 
 	 
-	 img {
+	 div.img {
+		 background: url(headerLibrary.png);
+		 border: 2px solid black;
 		 width: 100%;
 		 opacity: 0.4;
 		 filter: alpha(opacity=40);
+	 }
+	 
+	 div.trans {
+		 margin: 30px;
+		 background-color: #ffffff;
+		 border: 1px solid black;
+		 opacity: 0.2;
+		 filter: alpha(opacity=20);
+	 }
+	 
+	 div.trans p {
+		 margin: 5%;
+		 font-weight: bold;
 	 }
 	 
 	 p {
