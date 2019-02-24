@@ -20,7 +20,6 @@ $db = get_db();
 </head>
 
 <body background="library.jpg">
-
 	<div>
 		<h1>DB Library</h1>
 		<div class="row">
