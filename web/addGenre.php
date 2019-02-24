@@ -12,11 +12,15 @@ $db = get_db();
 ?>
 
 <?php
+    // make query
+    $query = "INSERT INTO genre (genre_id) VALUES (:genre_id)";
+        
 	// get genre from user
-	$genre = $_POST['genre'];
+	$genre = $_POST["genre"];
+    $statement->bindValue(':genre_id', $genre);
 
 	//prepare statement
-	$statement = $db->prepare("INSERT INTO genre VALUES ('$genre');");
+	$statement = $db->prepare($query);
 	$statement->execute();
 	
 	// reload main page

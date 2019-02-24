@@ -45,7 +45,7 @@ $db = get_db();
 		</form>
 	<div>
 		<p style="font-weight: bold;">Add a book to the library:</p>
-		<form method="POST" action="">
+		<form method="POST" action="addBook.php">
 			<span>Title: <input type="text" name="title"></span>
 			<span>Author: <input type="text" name="author"></span>
 			<span>Publication Date: <input type="text" name="date"></span>

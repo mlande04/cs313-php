@@ -18,8 +18,16 @@ $db = get_db();
 	$date = $_POST['date'];
 	$genre = $_POST['type'];
 	
+	// form query 
+	$query = "INSERT INTO " . $genre . " VALUES (:title, :author, :date)";
+	
+	// bind values
+	$statement->bindValue(':title', $title);
+	$statement->bindValue(':author', $author);
+	$statement->bindValue(':date', $date);
+	
 	// prepare statement
-	$statement = $db->prepare("INSERT INTO $type VALUES ('$title', '$author', 'date');");
+	$statement = $db->prepare($query);
 	$statement->execute();
 	
 	// reload main page
