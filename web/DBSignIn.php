@@ -1,8 +1,8 @@
 <?php
 
 /**************************************
-* File: BDLibrary
-* Purpose: View items in the db library
+* File: BDLibrary Sign In
+* Purpose: Sign in to your library db
 ***************************************/
 
 require ("connection.php");
@@ -54,8 +54,6 @@ if (isset($_POST['username'])) {
       Username:
       <input type="text" name="username" required>
     </label>
-  </div>
-  <div>
     <label>
       Password:
       <input type="password" name="password" required>

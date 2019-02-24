@@ -1,5 +1,28 @@
 <?php
-    require 'connection.php';
+
+/**************************************
+* File: BDLibrary Sign Up
+* Purpose: Sign up to create a Library DB
+***************************************/
+
+require ("connection.php");
+$db = get_db();
+
+?>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>DBLibrary | Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="DBLibrary.css">
+</head>
+
+<body background="library.jpg">
+	<h1>DB Library Sign Up</h1>
+	
+<?php
 
     if (isset($_POST['username'])) {
         //check to see if username is taken
@@ -42,3 +65,6 @@
     <input type="password" name="password" required>
     <button type="submit">Create User</button>
 </form>
+</body>
+
+</html>
