@@ -19,14 +19,10 @@ $db = get_db();
 	<link rel="stylesheet" type="text/css" href="DBLibrary.css">
 </head>
 
-<body>
+<body background="library.jpg">
 
 	<div>
-		<div class="img">
-		<div class="trans">
 		<h1>DB Library</h1>
-		</div>
-		</div>
 		<div class="row">
 		<div class="col" style="background-color: #C9E5F2;">
 		<p style="font-weight: bold;">Select a genre to view books from that genre available in the library.</p>
